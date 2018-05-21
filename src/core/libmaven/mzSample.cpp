@@ -23,6 +23,7 @@ mzSample::mzSample()
 	injectionTime = 0;
 	_sampleOrder = 0;
 	sampleNumber = -1;
+	//TODO: Remove label flags from sample class
 	_C13Labeled = false;
 	_N15Labeled = false;
 	_S34Labeled = false; //Feng note: added to track S34 labeling state

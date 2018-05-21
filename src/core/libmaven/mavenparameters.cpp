@@ -93,12 +93,13 @@ MavenParameters::MavenParameters(string settingsPath):lastUsedSettingsPath(setti
         minIsotopicCorrelation = 0;
         isotopeC13Correction = 0;
 
-	C13Labeled_BPE = false;
+    C13Labeled_BPE = false;
 	N15Labeled_BPE = false;
 	S34Labeled_BPE = false;
 	D2Labeled_BPE = false;
 	
-	C13Labeled_Barplot = true;
+	C12Parent_Barplot = true;
+    C13Labeled_Barplot = true;
 	N15Labeled_Barplot = false;
 	S34Labeled_Barplot = false;
 	D2Labeled_Barplot = false;

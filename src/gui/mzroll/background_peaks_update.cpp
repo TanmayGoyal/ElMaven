@@ -650,7 +650,8 @@ void BackgroundPeakUpdate::pullIsotopes(PeakGroup* parentgroup) {
 
         if (!isotopeFlag) return;
 
-	bool C13Flag = mavenParameters->C13Labeled_BPE;
+	bool C12Flag = true;
+        bool C13Flag = mavenParameters->C13Labeled_BPE;
 	bool N15Flag = mavenParameters->N15Labeled_BPE;
 	bool S34Flag = mavenParameters->S34Labeled_BPE;
 	bool D2Flag = mavenParameters->D2Labeled_BPE;
@@ -661,6 +662,7 @@ void BackgroundPeakUpdate::pullIsotopes(PeakGroup* parentgroup) {
 	IsotopeDetection isotopeDetection(
                 mavenParameters,
                 isoType,
+                C12Flag,
                 C13Flag,
                 N15Flag,
                 S34Flag,
@@ -669,6 +671,7 @@ void BackgroundPeakUpdate::pullIsotopes(PeakGroup* parentgroup) {
 }
 
 void BackgroundPeakUpdate::pullIsotopesIsoWidget(PeakGroup* parentgroup) {
+        bool C12Flag = true;
 	bool C13Flag = mavenParameters->C13Labeled_IsoWidget;
 	bool N15Flag = mavenParameters->N15Labeled_IsoWidget;
 	bool S34Flag = mavenParameters->S34Labeled_IsoWidget;
@@ -680,6 +683,7 @@ void BackgroundPeakUpdate::pullIsotopesIsoWidget(PeakGroup* parentgroup) {
 	IsotopeDetection isotopeDetection(
                 mavenParameters,
                 isoType,
+                C12Flag,
                 C13Flag,
                 N15Flag,
                 S34Flag,
@@ -689,7 +693,8 @@ void BackgroundPeakUpdate::pullIsotopesIsoWidget(PeakGroup* parentgroup) {
 
 void BackgroundPeakUpdate::pullIsotopesBarPlot(PeakGroup* parentgroup) {
 
-	bool C13Flag = mavenParameters->C13Labeled_Barplot;
+	bool C12Flag = mavenParameters->C12Parent_Barplot;
+        bool C13Flag = mavenParameters->C13Labeled_Barplot;
 	bool N15Flag = mavenParameters->N15Labeled_Barplot;
 	bool S34Flag = mavenParameters->S34Labeled_Barplot;
 	bool D2Flag = mavenParameters->D2Labeled_Barplot;
@@ -700,6 +705,7 @@ void BackgroundPeakUpdate::pullIsotopesBarPlot(PeakGroup* parentgroup) {
 	IsotopeDetection isotopeDetection(
                 mavenParameters,
                 isoType,
+                C12Flag,
                 C13Flag,
                 N15Flag,
                 S34Flag,

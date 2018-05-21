@@ -20,6 +20,7 @@ class IsotopeDetection
 	IsotopeDetection(
     	MavenParameters *mavenParameters,
     	IsotopeDetectionType isoType,
+		bool C12Flag,
 		bool C13Flag,
 		bool N15Flag,
 		bool S34Flag,
@@ -43,6 +44,7 @@ class IsotopeDetection
 	bool filterIsotope(Isotope x, float isotopePeakIntensity, float parentPeakIntensity, mzSample* sample, PeakGroup* parentGroup = NULL);
 
   private:
+	bool _C12Flag;
 	bool _C13Flag;
 	bool _N15Flag;
 	bool _S34Flag;

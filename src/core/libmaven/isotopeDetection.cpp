@@ -3,6 +3,7 @@
 IsotopeDetection::IsotopeDetection(
     MavenParameters *mavenParameters,
     IsotopeDetectionType isoType,
+    bool C12Flag,
     bool C13Flag,
     bool N15Flag,
     bool S34Flag,
@@ -10,6 +11,7 @@ IsotopeDetection::IsotopeDetection(
 {
     _mavenParameters = mavenParameters;
     _isoType = isoType;
+    _C12Flag = C12Flag;
     _C13Flag = C13Flag;
     _N15Flag = N15Flag;
     _S34Flag = S34Flag;
@@ -35,6 +37,7 @@ void IsotopeDetection::pullIsotopes(PeakGroup* parentgroup)
     vector<Isotope> masslist = MassCalculator::computeIsotopes(
         formula,
         charge,
+        _C12Flag,
         _C13Flag,
         _N15Flag,
         _S34Flag,

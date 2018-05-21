@@ -117,6 +117,7 @@ void PeakDetector::pullAllIsotopes() {
 
         if (mavenParameters->pullIsotopesFlag && !group.isIsotope())
         {
+            bool C12Flag = true;
             bool C13Flag = mavenParameters->C13Labeled_BPE;
             bool N15Flag = mavenParameters->N15Labeled_BPE;
             bool S34Flag = mavenParameters->S34Labeled_BPE;
@@ -128,6 +129,7 @@ void PeakDetector::pullAllIsotopes() {
             IsotopeDetection isotopeDetection(
                 mavenParameters,
                 isoType,
+                C12Flag,
                 C13Flag,
                 N15Flag,
                 S34Flag,

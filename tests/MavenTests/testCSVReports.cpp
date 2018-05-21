@@ -131,6 +131,7 @@ void TestCSVReports::testaddGroups() {
     peakDetector.processSlices(slices, "compounds");
     PeakGroup& parent = mavenparameters->allgroups[0];
 
+    bool C12Flag = true;
     bool C13Flag = mavenparameters->C13Labeled_BPE;
     bool N15Flag = mavenparameters->N15Labeled_BPE;
     bool S34Flag = mavenparameters->S34Labeled_BPE;
@@ -142,6 +143,7 @@ void TestCSVReports::testaddGroups() {
 	IsotopeDetection isotopeDetection(
                 mavenparameters,
                 isoType,
+                C12Flag,
                 C13Flag,
                 N15Flag,
                 S34Flag,

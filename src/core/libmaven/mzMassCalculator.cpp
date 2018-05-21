@@ -91,6 +91,7 @@ double MassCalculator::computeMass(string formula, int charge) {
 vector<Isotope> MassCalculator::computeIsotopes(
     string formula,
     int charge,
+    bool C12Flag,
     bool C13Flag,
     bool N15Flag,
     bool S34Flag,

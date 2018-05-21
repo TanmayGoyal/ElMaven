@@ -686,6 +686,7 @@ class mzSample
                           */
     static float getMaxRt(const vector<mzSample *> &samples);
 
+    //TODO: Remove redundant functions
     /**
                           * [C13Labeled?]
                           * @method C13Labeled

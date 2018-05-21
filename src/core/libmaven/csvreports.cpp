@@ -143,6 +143,7 @@ void CSVReports::insertGroupInformationIntoCSVFile (PeakGroup* group) {
 
         string formula = group->compound->formula;
         int charge = getMavenParameters()->getCharge(group->compound);
+        bool C12Flag = true;
         bool C13Flag = getMavenParameters()->C13Labeled_BPE;
         bool N15Flag = getMavenParameters()->N15Labeled_BPE;
         bool S34Flag = getMavenParameters()->S34Labeled_BPE;
@@ -151,6 +152,7 @@ void CSVReports::insertGroupInformationIntoCSVFile (PeakGroup* group) {
         vector<Isotope> masslist = MassCalculator::computeIsotopes(
             formula,
             charge,
+            C12Flag,
             C13Flag,
             N15Flag,
             S34Flag,

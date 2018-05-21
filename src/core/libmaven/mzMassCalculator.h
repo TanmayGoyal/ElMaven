@@ -99,6 +99,7 @@ class MassCalculator {
         static vector<Isotope> computeIsotopes(
             string formula,
             int charge,
+            bool C12Flag,
             bool C13Flag,
             bool N15Flag,
             bool S34Flag,

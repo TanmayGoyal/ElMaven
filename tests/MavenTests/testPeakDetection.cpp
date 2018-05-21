@@ -128,6 +128,7 @@ void TestPeakDetection::testpullIsotopes() {
     IsotopeDetection isotopeDetection1(
         mavenparameters,
         IsotopeDetection::PeakDetection,
+        true,
         mavenparameters->C13Labeled_BPE,
         mavenparameters->N15Labeled_BPE,
         mavenparameters->S34Labeled_BPE,
@@ -146,6 +147,7 @@ void TestPeakDetection::testpullIsotopes() {
     IsotopeDetection isotopeDetection2(
         mavenparameters,
         IsotopeDetection::PeakDetection,
+        true,
         mavenparameters->C13Labeled_BPE,
         mavenparameters->N15Labeled_BPE,
         mavenparameters->S34Labeled_BPE,
@@ -170,6 +172,7 @@ void TestPeakDetection::testpullIsotopes() {
     IsotopeDetection isotopeDetection3(
         mavenparameters,
         IsotopeDetection::PeakDetection,
+        true,
         mavenparameters->C13Labeled_BPE,
         mavenparameters->N15Labeled_BPE,
         mavenparameters->S34Labeled_BPE,
@@ -202,6 +205,7 @@ void TestPeakDetection::testpullIsotopes() {
     IsotopeDetection isotopeDetection4(
         mavenparameters,
         IsotopeDetection::PeakDetection,
+        true,
         mavenparameters->C13Labeled_BPE,
         mavenparameters->N15Labeled_BPE,
         mavenparameters->S34Labeled_BPE,
