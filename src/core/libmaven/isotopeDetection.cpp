@@ -318,6 +318,11 @@ void IsotopeDetection::childStatistics(
 bool IsotopeDetection::filterLabel(string isotopeName)
 {
 
+    if (!_C12Flag) {
+        if (isotopeName.find(C12_PARENT_LABEL) != string::npos)
+            return false;
+    }
+    
     if (!_C13Flag) {
         if (isotopeName.find(C13_LABEL) != string::npos)
             return false;

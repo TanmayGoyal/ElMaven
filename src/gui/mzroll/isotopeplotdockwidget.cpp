@@ -69,10 +69,17 @@ void IsotopePlotDockWidget::setToolBar()
 
     setTitleBarWidget(toolBar);
 
+    connect(C12, SIGNAL(toggled(bool)), this, SLOT(updateC12Flag(bool)));
     connect(C13, SIGNAL(toggled(bool)), this, SLOT(updateC13Flag(bool)));
     connect(N15, SIGNAL(toggled(bool)), this, SLOT(updateN15Flag(bool)));
     connect(D2, SIGNAL(toggled(bool)), this, SLOT(updateD2Flag(bool)));
     connect(S34, SIGNAL(toggled(bool)), this, SLOT(updateS34Flag(bool)));
+}
+
+void IsotopePlotDockWidget::updateC12Flag(bool setState)
+{
+    _mw->mavenParameters->C12Parent_Barplot = setState;
+    recompute();
 }
 
 void IsotopePlotDockWidget::updateC13Flag(bool setState)

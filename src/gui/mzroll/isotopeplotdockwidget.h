@@ -17,6 +17,7 @@ public:
     ~IsotopePlotDockWidget();
 
 private Q_SLOTS:
+    void updateC12Flag(bool setState);
     void updateC13Flag(bool setState);
     void updateN15Flag(bool setState);
     void updateD2Flag(bool setState);

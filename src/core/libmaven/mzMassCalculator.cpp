@@ -107,8 +107,10 @@ vector<Isotope> MassCalculator::computeIsotopes(
     vector<Isotope> isotopes;
     double parentMass = computeNeutralMass(formula);
 
-    Isotope parent(C12_PARENT_LABEL, parentMass);
-    isotopes.push_back(parent);
+    if (C12Flag) {
+        Isotope parent(C12_PARENT_LABEL, parentMass);
+        isotopes.push_back(parent);
+    }
 
     if(C13Flag && N15Flag) {
         for (int i = 1; i <= CatomCount; i++) {
