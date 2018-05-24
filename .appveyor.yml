@@ -1,0 +1,56 @@
+# image: Visual Studio 2013
+# configura tion: Debug
+
+# install:
+#   - set QTDIR=C:\Qt\5.5\mingw492_32
+#   - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
+
+
+# before_build:
+#   - set PATH=C:\msys2\bin;%QT5%\bin;%PATH%
+
+install:
+  cmd:
+  #   C:\msys64\usr\bin\bash --login -c "pacman -S --verbose --needed --noconfirm base-devel";
+    # cd afsdfdsfdf  -ErrorAction Ignore
+    C:\msys64\usr\bin\bash --login -c "pacman -S --noconfirm mingw-w64-x86_64-qt-creator";
+
+# environment:
+#   -compiler: msys2
+  # - QT: 
+  #   MINGW: 
+
+# build:
+#   project: add.cpp
+
+# before_build:
+#   cmd:
+    # cd C:\msys64\mingw64\bin\;
+    # ls;
+    # C:\msys64\usr\bin\bash --login -c "";
+  # cmd: 
+  #   ;
+
+
+build_script:
+  - set PATH=%PATH%;C:\msys64\mingw64\bin\;C:\MinGW\bin
+  # - dir
+  - cd test\
+  - C:\msys64\usr\bin\bash --login -c "./run.sh";
+
+  # - C:\msys64\usr\bin\bash --login -c "cd C:/projects/test-appveyor/test/ && mingw32-make"
+  # - dir
+  # - make
+
+  # - test\make
+  # cmd:
+  #   set PATH=C:\msys64\mingw64\bin\;
+  #   qmake test\test.pro;
+  # - qmake test\test.pro
+  # - test\make
+
+# deploy:
+# - provider: GitHub
+#   auth_token:
+#     secure: hQDQ9bqFo+fkhKBZtywbP7ZpnLzCxpIiMIgbWLYvcMSmdJ1BvIWFQU0HtNK9rikt
+#   artifact: test
