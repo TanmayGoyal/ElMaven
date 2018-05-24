@@ -35,7 +35,7 @@ install:
 build_script:
   - set PATH=%PATH%;C:\msys64\mingw64\bin\;C:\MinGW\bin
   # - dir
-  - cd test\
+  # - cd test\
   - C:\msys64\usr\bin\bash --login -c "./run.sh";
 
   # - C:\msys64\usr\bin\bash --login -c "cd C:/projects/test-appveyor/test/ && mingw32-make"
