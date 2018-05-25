@@ -33,6 +33,8 @@ build_script:
 
   - bash -lc "cd C:/projects/ElMaven/ ; echo yes | ./run.sh"
 
+artifacts:
+- path: /bin/ElMaven_*
 
 
 deploy:
