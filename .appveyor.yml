@@ -39,6 +39,7 @@ build_script:
   # - dir
   # - cd test\
   - C:\msys64\usr\bin\bash --login -c "cd C:/projects/ElMaven/ && echo yes | ./run.sh"
+  
   - cd bin\
   - dir
 
