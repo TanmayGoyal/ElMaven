@@ -32,14 +32,14 @@ build_script:
   - bash -lc "cd C:/projects/ElMaven/ ; echo yes | ./run.sh"
 
 artifacts:
-- path: /bin/El_Maven_*
+- path: bin/El_Maven_*
 
 
 deploy:
   provider: GitHub
   auth_token:
     secure: hQDQ9bqFo+fkhKBZtywbP7ZpnLzCxpIiMIgbWLYvcMSmdJ1BvIWFQU0HtNK9rikt
-  artifact: El_Maven_*
+  artifact: bin/El_Maven_*
 
 
 
