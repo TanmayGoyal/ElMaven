@@ -32,7 +32,7 @@ build_script:
   - bash -lc "cd C:/projects/ElMaven/ ; echo yes | ./run.sh"
 
 artifacts:
-- path: /bin/ElMaven_*
+- path: /bin/El_Maven_*
 
 
 deploy:
