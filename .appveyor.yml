@@ -1,3 +1,49 @@
+version: 1.0.{build}
+environment:
+  matrix:
+  - COMPILER: msys2
+    PLATFORM: x64
+    MSYS2_ARCH: x86_64
+    MSYS2_DIR: msys64
+    MSYSTEM: MINGW64
+    BIT: 64
+  PATH: 'C:\%MSYS2_DIR%\%MSYSTEM%\bin;C:\%MSYS2_DIR%\usr\bin;%PATH%'
+
+
+
+
+build_script:
+  # Get submodules
+  - git submodule update --init --recursive
+
+  - SET "PATH=C:\%MSYS2_DIR%\%MSYSTEM%\bin;C:\%MSYS2_DIR%\usr\bin;%PATH%"
+
+
+
+  # Install 64-bit QT
+  - bash -lc "pacman -S --needed --noconfirm mingw-w64-x86_64-qt-creator"
+
+  # Install zlib
+  - bash -lc "pacman -S --needed --noconfirm zlib-devel"
+
+  # Install sqlite3
+  - bash -lc "pacman -S --needed --noconfirm mingw64/mingw-w64-x86_64-sqlite3"
+
+  - bash -lc "cd C:/projects/ElMaven/ ; echo yes | ./run.sh"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # image: Visual Studio 2013
 # configura tion: Debug
 
@@ -9,9 +55,9 @@
 # before_build:
 #   - set PATH=C:\msys2\bin;%QT5%\bin;%PATH%
 
-install:
-  - C:\msys64\usr\bin\bash --login -c "pacman -S --noconfirm mingw-w64-x86_64-qt-creator"
-  - C:\msys64\usr\bin\bash --login -c "pacman -S --noconfirm mingw64/mingw-w64-x86_64-hdf5 mingw64/mingw-w64-x86_64-netcdf mingw64/mingw-w64-x86_64-boost"
+# install:
+#   - C:\msys64\usr\bin\bash --login -c "pacman -S --noconfirm mingw-w64-x86_64-qt-creator"
+#   - C:\msys64\usr\bin\bash --login -c "pacman -S --noconfirm mingw64/mingw-w64-x86_64-hdf5 mingw64/mingw-w64-x86_64-netcdf mingw64/mingw-w64-x86_64-boost"
   
   #   C:\msys64\usr\bin\bash --login -c "pacman -S --verbose --needed --noconfirm base-devel";
     # cd afsdfdsfdf  -ErrorAction Ignore
@@ -34,14 +80,14 @@ install:
   #   ;
 
 
-build_script:
-  - set PATH=%PATH%;C:\msys64\mingw64\bin\;C:\MinGW\bin
-  # - dir
-  # - cd test\
-  - C:\msys64\usr\bin\bash --login -c "cd C:/projects/ElMaven/ && echo yes | ./run.sh"
-  
-  - cd bin\
-  - dir
+# build_script:
+#   - set PATH=%PATH%;C:\msys64\mingw64\bin\;C:\MinGW\bin
+#   # - dir
+#   # - cd test\
+#   - C:\msys64\usr\bin\bash --login -c "cd C:/projects/ElMaven/ && echo yes | ./run.sh"
+
+#   - cd bin\
+#   - dir
 
   # - C:\msys64\usr\bin\bash --login -c "cd C:/projects/test-appveyor/test/ && mingw32-make"
   # - dir
