@@ -29,7 +29,7 @@ build_script:
   - bash -lc "pacman -S --needed --noconfirm zlib-devel"
 
   # Install sqlite3
-  - bash -lc "pacman -S --needed --noconfirm mingw64/mingw-w64-x86_64-sqlite3"
+  # - bash -lc "pacman -S --needed --noconfirm mingw64/mingw-w64-x86_64-sqlite3"
 
   - bash -lc "cd C:/projects/ElMaven/ ; echo yes | ./run.sh"
 
