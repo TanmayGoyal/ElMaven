@@ -11,14 +11,20 @@ while true; do
 done
 make -j $(nproc)
 
+echo "HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII 1"
 
 if [ -f tests/MavenTests/test.xml ]; then
 	rm test*.xml
 fi
 
+echo "HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII 2"
+
 if [ -f ./bin/MavenTests ]; then
 	./bin/MavenTests -xml
 fi
+
+echo "HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII 3"
+
 
 type="$(uname)"
 systemType="$(echo "$type"  |  tr '[:upper:]'  '[:lower:]')"
@@ -27,3 +33,4 @@ if [ $systemType == "linux" ] && [ $flag == 10 ]; then
     genhtml ../coverage.info --output-directory ../coverage
 fi
 
+echo "HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII 4"
