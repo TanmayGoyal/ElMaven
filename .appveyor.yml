@@ -1,13 +1,11 @@
 version: 1.0.{build}
 environment:
-  matrix:
-  - COMPILER: msys2
-    PLATFORM: x64
-    MSYS2_ARCH: x86_64
-    MSYS2_DIR: msys64
-    MSYSTEM: MINGW64
-    BIT: 64
-  PATH: 'C:\%MSYS2_DIR%\%MSYSTEM%\bin;C:\%MSYS2_DIR%\usr\bin;%PATH%'
+  COMPILER: msys2
+  PLATFORM: x64
+  MSYS2_ARCH: x86_64
+  MSYS2_DIR: msys64
+  MSYSTEM: MINGW64
+  BIT: 64
 
 
 
