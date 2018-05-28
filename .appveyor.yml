@@ -43,7 +43,7 @@ deploy:
   provider: GitHub
   auth_token:
     secure: hQDQ9bqFo+fkhKBZtywbP7ZpnLzCxpIiMIgbWLYvcMSmdJ1BvIWFQU0HtNK9rikt
-  artifact: bin/El_Maven_*
+  artifact: bin/El_Maven_*.exe
 
 
 
