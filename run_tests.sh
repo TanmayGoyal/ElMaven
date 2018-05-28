@@ -14,7 +14,7 @@ if [ -f ./bin/MavenTests ]; then
     echo $MY_VAR
 
     if [ $MY_VAR != 0 ]; then
-        exit 1
+        printf "1" 1>&2
         # knsdlgdslfsdkf
     fi
 

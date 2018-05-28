@@ -30,8 +30,7 @@ before_build:
   # - IF ($LASTEXITCODE -ne 0) {$host.SetShouldExit($LASTEXITCODE)}
 
 build_script:
-  ps:
-    bash -lc "cd C:/projects/ElMaven/ ; ./run_tests.sh"
+  - bash -lc "cd C:/projects/ElMaven/ ; ./run_tests.sh"
   
   # Get submodules
  
