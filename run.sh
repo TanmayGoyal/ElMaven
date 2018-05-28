@@ -27,8 +27,8 @@ if [ -f ./bin/MavenTests ]; then
     echo $MY_VAR
 
     if [ $MY_VAR != 0 ]; then
-        echo yo
-        exit 1
+        echo "Error!" 1>&2
+        # knsdlgdslfsdkf
     fi
 
 fi
