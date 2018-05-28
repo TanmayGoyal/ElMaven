@@ -25,6 +25,8 @@ before_build:
   # Install zlib
   - bash -lc "pacman -S --needed --noconfirm zlib-devel"
 
+  - bash -lc "cd C:/projects/ElMaven/ ; echo yes | ./run.sh"
+
 build_script:
   # Get submodules
  
@@ -33,7 +35,8 @@ build_script:
   # - bash -lc "pacman -S --needed --noconfirm mingw64/mingw-w64-x86_64-sqlite3"
 
   ps:
-    bash -lc "cd C:/projects/ElMaven/ ; echo yes | ./run.sh"
+    bash -lc "./run_tests.sh"
+  
   # - bash -lc "cd C:/projects/ElMaven/bin ; ls"
 
   # - cd bin
