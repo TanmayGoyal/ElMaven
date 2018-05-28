@@ -22,8 +22,12 @@ echo "HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 if [ -f ./bin/MavenTests ]; then
 	./bin/MavenTests -xml
 
-    if [ $? != 0 ]; then
-        exit $?
+    MY_VAR=$?
+
+    echo MY_VAR
+
+    if [ MY_VAR != 0 ]; then
+        exit 1
     fi
 
 fi
