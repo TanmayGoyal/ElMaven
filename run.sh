@@ -24,9 +24,10 @@ if [ -f ./bin/MavenTests ]; then
 
     MY_VAR=$?
 
-    echo MY_VAR
+    echo $MY_VAR
 
-    if [ MY_VAR != 0 ]; then
+    if [ $MY_VAR != 0 ]; then
+        echo yo
         exit 1
     fi
 
