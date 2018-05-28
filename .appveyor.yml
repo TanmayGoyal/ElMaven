@@ -13,22 +13,22 @@ environment:
 build_script:
   # Get submodules
   cmd:
-    - git submodule update --init --recursive
+    git submodule update --init --recursive
 
-    - SET "PATH=C:\%MSYS2_DIR%\%MSYSTEM%\bin;C:\%MSYS2_DIR%\usr\bin;%PATH%"
+    SET "PATH=C:\%MSYS2_DIR%\%MSYSTEM%\bin;C:\%MSYS2_DIR%\usr\bin;%PATH%"
 
 
 
     # Install 64-bit QT
-    - bash -lc "pacman -S --needed --noconfirm mingw-w64-x86_64-qt-creator"
+    bash -lc "pacman -S --needed --noconfirm mingw-w64-x86_64-qt-creator"
 
-    - bash -lc "pacman -S --needed --noconfirm mingw64/mingw-w64-x86_64-hdf5 mingw64/mingw-w64-x86_64-netcdf mingw64/mingw-w64-x86_64-boost"
+    bash -lc "pacman -S --needed --noconfirm mingw64/mingw-w64-x86_64-hdf5 mingw64/mingw-w64-x86_64-netcdf mingw64/mingw-w64-x86_64-boost"
     
     # Install zlib
-    - bash -lc "pacman -S --needed --noconfirm zlib-devel"
+    bash -lc "pacman -S --needed --noconfirm zlib-devel"
 
     # Install sqlite3
-    # - bash -lc "pacman -S --needed --noconfirm mingw64/mingw-w64-x86_64-sqlite3"
+    # bash -lc "pacman -S --needed --noconfirm mingw64/mingw-w64-x86_64-sqlite3"
 
   ps:
     bash -lc "cd C:/projects/ElMaven/ ; echo yes | ./run.sh"
