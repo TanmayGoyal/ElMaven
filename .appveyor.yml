@@ -30,15 +30,15 @@ before_build:
   # - IF ($LASTEXITCODE -ne 0) {$host.SetShouldExit($LASTEXITCODE)}
 
 build_script:
+  ps:
+    bash -lc "cd C:/projects/ElMaven/ ; ./run_tests.sh"
+  
   # Get submodules
  
 
   # Install sqlite3
   # - bash -lc "pacman -S --needed --noconfirm mingw64/mingw-w64-x86_64-sqlite3"
 
-  ps:
-    bash -lc "cd C:/projects/ElMaven/ ; ./run_tests.sh"
-  
   # - bash -lc "cd C:/projects/ElMaven/bin ; ls"
 
   # - cd bin
