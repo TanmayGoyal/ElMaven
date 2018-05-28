@@ -27,7 +27,7 @@ before_build:
 
   - bash -lc "cd C:/projects/ElMaven/ ; echo yes | ./run.sh"
 
-  IF ($LASTEXITCODE -ne 0) {$host.SetShouldExit($LASTEXITCODE)}
+  - IF ($LASTEXITCODE -ne 0) {$host.SetShouldExit($LASTEXITCODE)}
 
 build_script:
   # Get submodules
