@@ -30,6 +30,10 @@ build_script:
   # - bash -lc "pacman -S --needed --noconfirm mingw64/mingw-w64-x86_64-sqlite3"
 
   - bash -lc "cd C:/projects/ElMaven/ ; echo yes | ./run.sh"
+  - bash -lc "cd C:/projects/ElMaven/bin ; ls"
+
+  # - cd bin
+  # - dir
 
 artifacts:
 - path: bin/El_Maven_*
