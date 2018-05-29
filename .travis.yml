@@ -9,7 +9,7 @@ os: osx
 install:
   # - brew install boost
   - brew install llvm@3.7
-  - brew install netcdf
+  # - brew install netcdf
   - brew install cppcheck qt
   - brew link qt5 --force
   # - 
