@@ -9,10 +9,10 @@ if [ -f tests/MavenTests/test.xml ]; then
 fi
 
 
-if [ -f ./bin/MavenTests* ]; then
+if [ -f ./bin/MavenTests.app ]; then
 	echo "inside if 2"
 
-	./bin/MavenTests* -xml
+	./bin/MavenTests.app -xml
 
     MY_VAR=$?
 
