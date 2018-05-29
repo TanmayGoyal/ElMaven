@@ -21,7 +21,7 @@ int readLog(QString);
 int main(int argc, char** argv) {
     QCoreApplication app(argc, argv);
 
-    int result = 0;
+    int result = 1;
 
     if (freopen("testLoadSamples.xml", "w", stdout))
         result |= QTest::qExec(new TestLoadSamples, argc, argv);
@@ -79,7 +79,7 @@ int main(int argc, char** argv) {
         result |= QTest::qExec(new TestIsotopeLogic, argc, argv);
     result|=readLog("testIsotopeLogic.xml");
 
-    return 0;
+    return result;
 }
 
 
