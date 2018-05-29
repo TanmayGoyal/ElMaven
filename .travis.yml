@@ -16,3 +16,4 @@ install:
 script:
   - qmake CONFIG+=debug -o Makefile build.pro
   - make -j4
+  - ./run_tests.sh
