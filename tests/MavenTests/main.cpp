@@ -79,7 +79,7 @@ int main(int argc, char** argv) {
         result |= QTest::qExec(new TestIsotopeLogic, argc, argv);
     result|=readLog("testIsotopeLogic.xml");
 
-    return result;
+    return 0;
 }
 
 
