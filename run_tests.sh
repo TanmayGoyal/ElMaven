@@ -24,6 +24,7 @@ if [ -d bin/MavenTests.app ]; then
 	if [ $VAR != 0 ]; then
 		echo "yayy!!"
 		exit 1
+	fi
 
 fi
 
@@ -47,7 +48,6 @@ if [ -f ./bin/MavenTests* ]; then
         exit 1
         # knsdlgdslfsdkf
     fi
-
 fi
 
 echo "end run tests"
