@@ -13,14 +13,16 @@ if [ -f tests/MavenTests/test.xml ]; then
 	rm test*.xml
 fi
 
-if [ -d bin/MavenTests* ]; then
+if [ -d bin/MavenTests.app ]; then
 	echo "This is a directory!"
+	cd Contents/MacOS/
 
+	ls
 
 fi
 
-cd bin/MavenTests*/Contents
-ls -R
+# cd bin/MavenTests*/Contents
+# ls -R
 # ls
 # cd ..
 
