@@ -4,15 +4,18 @@
 # cd bin/;
 # ls;
 
+echo "start run tests"
+
 if [ -f tests/MavenTests/test.xml ]; then
+	echi "inside if 1"
 	rm test*.xml
 fi
 
 
-if [ -f ./bin/MavenTests.app ]; then
+if [ -f ./bin/MavenTests* ]; then
 	echo "inside if 2"
 
-	./bin/MavenTests.app -xml
+	./bin/MavenTests* -xml
 
     MY_VAR=$?
 
@@ -25,4 +28,4 @@ if [ -f ./bin/MavenTests.app ]; then
 
 fi
 
-echo "HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII 2"
+echo "end run tests"
