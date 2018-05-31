@@ -6,10 +6,16 @@
 
 echo "start run tests"
 
+
+
 if [ -f tests/MavenTests/test.xml ]; then
 	echi "inside if 1"
 	rm test*.xml
 fi
+
+cd bin/
+ls
+cd ..
 
 ./bin/MavenTests*
 
