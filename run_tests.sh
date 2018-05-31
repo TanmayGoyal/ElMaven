@@ -9,16 +9,13 @@ echo "start run tests"
 
 
 if [ -f tests/MavenTests/test.xml ]; then
-	echi "inside if 1"
+	echo "inside if 1"
 	rm test*.xml
 fi
 
 if [ -d bin/MavenTests.app ]; then
 	echo "This is a directory!"
-	cd Contents/MacOS/
-
-	ls
-
+	./Contents/MacOS/MavenTests
 fi
 
 # cd bin/MavenTests*/Contents
