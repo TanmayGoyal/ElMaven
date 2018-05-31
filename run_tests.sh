@@ -20,7 +20,7 @@ if [ -d bin/MavenTests* ]; then
 fi
 
 cd bin/MavenTests*/Contents
-ls
+ls -R
 # ls
 # cd ..
 
