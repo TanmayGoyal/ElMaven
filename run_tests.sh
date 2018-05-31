@@ -14,10 +14,10 @@ if [ -f tests/MavenTests/test.xml ]; then
 fi
 
 cd bin/
-ls
-cd ..
+# ls
+# cd ..
 
-./bin/MavenTests*
+./MavenTests.app
 
 if [ -f ./bin/MavenTests* ]; then
 	echo "inside if 2"
