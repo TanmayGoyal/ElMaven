@@ -65,6 +65,9 @@ script:
     fi
 
     if [ "$TRAVIS_OS_NAME" == "linux" ]; then
+      export QT_SELECT=qt5
+      export CXX="g++-5"
+      export CC="gcc-5"
       g++ -v;
       gcc -v;
       qmake -qt=qt5 -v;
