@@ -19,7 +19,7 @@ if [ -d bin/MavenTests* ]; then
 
 fi
 
-cd bin/MavenTests*
+cd bin/MavenTests*/Contents
 ls
 # ls
 # cd ..
