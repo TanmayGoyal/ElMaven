@@ -15,7 +15,7 @@ fi
 
 if [ -d bin/MavenTests.app ]; then
 	echo "This is a directory!"
-	./Contents/MacOS/MavenTests
+	.bin/MavenTests.app/Contents/MacOS/MavenTests
 fi
 
 # cd bin/MavenTests*/Contents
