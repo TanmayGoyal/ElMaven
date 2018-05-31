@@ -15,7 +15,16 @@ fi
 
 if [ -d bin/MavenTests.app ]; then
 	echo "This is a directory!"
-	.bin/MavenTests.app/Contents/MacOS/MavenTests
+	./bin/MavenTests.app/Contents/MacOS/MavenTests
+
+	VAR=$?
+
+	echo $VAR
+
+	if [ $VAR != 0 ]; then
+		echo "yayy!!"
+		exit 1
+
 fi
 
 # cd bin/MavenTests*/Contents
