@@ -61,7 +61,7 @@ before_install:
 
 sudo: required
 
-script:
+install:
   - |
 
     if [ "$TRAVIS_OS_NAME" == "osx" ]; then
