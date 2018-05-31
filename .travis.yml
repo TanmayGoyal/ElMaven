@@ -1,5 +1,31 @@
 
-os: osx
+
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: required
+      language: cpp
+      compiler: gcc-5
+      group: deprecated-2017Q2
+
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-5
+
+    - os: osx
+
+# addons:
+#   apt:
+#     sources:
+#       - ubuntu-toolchain-r-test
+#     packages:
+#       - g++-5
+# env:
+#   - MATRIX_EVAL="CC=gcc-5 && CXX=g++-5"
 # sudo: required
 
 
@@ -7,11 +33,65 @@ os: osx
 #   - brew update
 
 install:
-  # - brew install boost
-  - brew install llvm@3.7
-  # - brew install netcdf
-  - brew install cppcheck qt
-  - brew link qt5 --force
+  - |
+
+    if [ "$TRAVIS_OS_NAME" == "osx" ]; then
+        brew install llvm@3.7;
+        brew install cppcheck qt;
+        brew link qt5 --force;
+    fi
+
+    if [ "$TRAVIS_OS_NAME" == "linux" ]; then
+      sudo apt-get update -qq;
+      sudo apt-get install -qq qt5-qmake qtbase5-dev qtscript5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev libboost-all-dev libnetcdf-dev;
+      eval "${MATRIX_EVAL}";
+    fi
+
+# brew install cppcheck qt
+# brew link qt5 --force
+# - brew install boost
+# - brew install llvm@3.7
+# - brew install netcdf
+# - 
+
+
+script:
+  - |
+
+    if [ "$TRAVIS_OS_NAME" == "osx" ]; then
+      qmake CONFIG+=debug -o Makefile build.pro;
+      make -j4;
+      ./run_tests.sh
+    fi
+
+    if [ "$TRAVIS_OS_NAME" == "linux" ]; then
+      g++ -v
+      gcc -v
+      qmake -qt=qt5 -v
+      qmake -qt=qt5 CONFIG+=release -o Makefile build.pro
+      make -j4
+      ./bin/MavenTests -xml
+    fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# sudo: required
+
+
+# before_install:
+#   - brew update
+
   # - 
 script:
   - qmake CONFIG+=debug -o Makefile build.pro
