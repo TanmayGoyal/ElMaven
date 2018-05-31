@@ -13,6 +13,12 @@ if [ -f tests/MavenTests/test.xml ]; then
 	rm test*.xml
 fi
 
+if [ -d bin/MavenTests* ]; then
+	echo "This is a directory!"
+
+
+fi
+
 cd bin/MavenTests*
 ls
 # ls
