@@ -11,17 +11,18 @@ if [ -f tests/MavenTests/test.xml ]; then
 	rm test*.xml
 fi
 
+./bin/MavenTests*
 
 if [ -f ./bin/MavenTests* ]; then
 	echo "inside if 2"
 
 	./bin/MavenTests* -xml
 
-    MY_VAR=$?
+    VAR=$?
 
-    echo $MY_VAR
+    echo $VAR
 
-    if [ $MY_VAR != 0 ]; then
+    if [ $VAR != 0 ]; then
         exit 1
         # knsdlgdslfsdkf
     fi
