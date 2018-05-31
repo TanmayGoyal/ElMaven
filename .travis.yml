@@ -3,18 +3,19 @@
 matrix:
   include:
     - os: linux
-      dist: trusty
-      sudo: required
-      language: cpp
-      compiler: gcc-5
-      group: deprecated-2017Q2
-
       addons:
         apt:
           sources:
             - ubuntu-toolchain-r-test
           packages:
             - g++-5
+
+
+      dist: trusty
+      language: cpp
+      compiler: gcc-5
+      group: deprecated-2017Q2
+
 
     - os: osx
 
@@ -36,7 +37,7 @@ env:
 # before_install:
 #   - brew update
 
-install:
+before_install:
   - |
 
     if [ "$TRAVIS_OS_NAME" == "osx" ]; then
@@ -58,6 +59,7 @@ install:
 # - brew install netcdf
 # - 
 
+sudo: required
 
 script:
   - |
