@@ -21,7 +21,7 @@ int readLog(QString);
 int main(int argc, char** argv) {
     QCoreApplication app(argc, argv);
 
-    int result = 1;
+    int result = 0;
 
     if (freopen("testLoadSamples.xml", "w", stdout))
         result |= QTest::qExec(new TestLoadSamples, argc, argv);
