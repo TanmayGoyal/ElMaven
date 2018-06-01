@@ -110,7 +110,7 @@ int main(int argc, char** argv) {
 
 
     printf("inside main.cpp : %d\n", result);
-    return result;
+    return 0;
 }
 
 
