@@ -21,6 +21,7 @@ int readLog(QString);
 int main(int argc, char** argv) {
     QCoreApplication app(argc, argv);
 
+    printf("started main.cpp\n");
     int result = 0;
 
     if (freopen("testLoadSamples.xml", "w", stdout))
