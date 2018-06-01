@@ -79,6 +79,8 @@ int main(int argc, char** argv) {
         result |= QTest::qExec(new TestIsotopeLogic, argc, argv);
     result|=readLog("testIsotopeLogic.xml");
 
+
+    printf("inside main.cpp : %d\n", result);
     return result;
 }
 
