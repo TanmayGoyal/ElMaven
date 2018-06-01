@@ -17,6 +17,8 @@ if [ -d bin/MavenTests.app ]; then
 	echo "This is a directory!"
 	./bin/MavenTests.app/Contents/MacOS/MavenTests
 
+	echo $?
+	
 	VAR=$?
 
 	echo $VAR
