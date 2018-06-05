@@ -8,7 +8,6 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
             - sourceline: 'deb http://ppa.launchpad.net/kubuntu-ppa/backports/ubuntu xenial main'
-            - sourceline:
           packages:
             - g++-5
             - qtbase5-dev
