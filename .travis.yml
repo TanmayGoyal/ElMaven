@@ -8,34 +8,12 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
             - sourceline: 'deb http://ppa.launchpad.net/kubuntu-ppa/backports/ubuntu xenial main'
+            - sourceline:
           packages:
             - g++-5
-            - qt5-qmake
-            - libqt5concurrent5
-            - libqt5core5a
-            - libqt5dbus5
-            - qtbase5-de
-            - libqt5gui5
-            - libqt5network5
-            - libqt5printsupport5
-            - libqt5sql5
-            - libqt5test5
-            - libqt5widgets5
-            - libqt5xml5
-            - qtbase5-dev-tools
-            - libqt5script5
-            - libqt5scripttools5
+            - qtbase5-dev
             - qtscript5-dev
-            - libqt5qml5
-            - libqt5quick5
-            - libqt5quick5-gles
-            - libqt5quickparticles5
-            - libqt5quickparticles5-gles
-            - libqt5quicktest5
-            - libqt5quickwidgets5
-            - qt5-qmltooling-plugins
             - qtdeclarative5-dev
-            - libqt5webkit5
             - libqt5webkit5-dev
 
 
