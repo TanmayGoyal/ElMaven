@@ -10,10 +10,6 @@ matrix:
             - sourceline: 'deb http://ppa.launchpad.net/kubuntu-ppa/backports/ubuntu xenial main'
           packages:
             - g++-5
-            - qtbase5-dev
-            - qtscript5-dev
-            - qtdeclarative5-dev
-            - libqt5webkit5-dev
 
 
       dist: trusty
@@ -54,7 +50,7 @@ before_install:
     if [ "$TRAVIS_OS_NAME" == "linux" ]; then
       eval "${MATRIX_EVAL}";
       sudo apt-get update -qq;
-      sudo apt-get install -qq libsqlite3-dev libboost-all-dev libnetcdf-dev;
+      sudo apt-get install -y -qq  qtbase5-dev qtscript5-dev qtdeclarative5-dev libqt5webkit5-dev libboost-all-dev libnetcdf-dev;
     fi
 
 # brew install cppcheck qt
