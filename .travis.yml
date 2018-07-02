@@ -5,7 +5,7 @@ matrix:
         apt:
           sources:
             - ubuntu-toolchain-r-test
-            - sourceline: 'deb http://ppa.launchpad.net/kubuntu-ppa/backports/ubuntu xenial main'
+            # - sourceline: 'deb http://ppa.launchpad.net/kubuntu-ppa/backports/ubuntu xenial main'
           packages:
             - g++-5
 
