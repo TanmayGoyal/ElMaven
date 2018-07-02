@@ -11,7 +11,6 @@ while true; do
 done
 make -j $(nproc)
 
-echo "HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII 1"
 
 # if [ -f tests/MavenTests/test.xml ]; then
 # 	rm test*.xml
@@ -32,11 +31,6 @@ echo "HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 #     fi
 
 # fi
-
-
-
-echo "HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII 3"
-
 
 type="$(uname)"
 systemType="$(echo "$type"  |  tr '[:upper:]'  '[:lower:]')"
